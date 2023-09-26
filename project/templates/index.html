@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>flask app</title>
+</head>
+<body>
+	<h1> NAME SWAP</h1>
+	<button><a href="{{url_for('adduser')}}">Add users</a></button>
+	<h2>USER DETAILS</h2>
+	<table>
+		<tr style="color:red">
+			<th>ID</th>
+			<th>FIRST NAME</th>
+			<th>MIDDLE NAME</th>
+			<th>LAST NAME</th>
+		</tr>
+		{% for i in datas %}
+		<tr>
+			<td>{{i.ID}}</td>
+			<td>{{i.NAME}}</td>
+			<td>{{i.MIDDLE_NAME}}</td>
+			<td>{{i.LAST_NAME}}</td>
+		</tr>
+		{% endfor%}
+	</table>
+	<h2>AFTER SWAPING</h2>
+	<table>
+		<tr style="color:red">
+			<th>ID</t>
+			<th>FIRST NAME</th>
+			<th>MIDDLE NAME</th>
+			<th>LAST NAME</th>
+		</tr>
+		{% for i in datas %}
+		<tr>
+			<td>{{i.ID}}</td>
+			<td>{{i.LAST_NAME}}</td>
+			<td>{{i.MIDDLE_NAME}}</td>
+			<td>{{i.NAME}}</td>
+		</tr>
+		{% endfor%}
+	</table>
+
+
+</body>
+</html>
